@@ -1,0 +1,299 @@
+* { box-sizing: border-box; }
+
+:root {
+    --lapis-lazuli: #1a6192ff;
+    --safety-orange: #f27f21ff;
+    --white: #f8fcffff;
+    --antiflash-white: #f1f1f1ff;
+    --aero: #00b2dcff;
+    --xanthous: #fab31dff;
+    --steel-blue: #227ebdff;
+    --celestial-blue: #3798dbff;
+    --brown: #924b1aff;
+    --copper: #bd7a37ff;
+    /* https://coolors.co/1a6192-f27f21-f8fcff-f1f1f1-00b2dc-fab31d-227ebd-3798db-924b1a-bd7a37 */
+    --color-priB: var(--safety-orange);
+    --color-priD: var(--lapis-lazuli);
+    --color-secB: var(--xanthous);
+    --color-secD: var(--aero);
+
+    --color-white: var(--white);
+    --color-gray: var(--antiflash-white);
+    --color-green: #46DB37;
+    --color-red: #E63462;
+
+    --font-heading: 'Hanken Grotesk', sans-serif;
+    --font-family: 'Inter', sans-serif;;
+    --font-size: 16px;
+}
+
+/* Individual element */
+a {
+    text-decoration: underline;
+    cursor: pointer;
+    /* color: var(--color-fg); */
+}
+
+article {
+    /* Generous padding for long text */
+    padding: 0 10rem;
+}
+
+button {
+    border: 0px solid var(--color-priB);
+    cursor: pointer;
+    /* #buttonA will contains more settings */
+}
+
+details {
+    border-left: none;
+    padding-left: 1rem;
+}
+details[open] { border-left: 0.5rem solid var(--color-secB); }
+
+dl > dt { font-weight: bold; }
+
+h1, h2, h3 { font-family: var(--font-heading); }
+h1 { font-size: 2rem; } /* User agent section overwrite */
+
+input {
+    border: 1px solid var(--color-secB);
+    border-radius: 0;
+    outline: 0;
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+}
+
+summary {
+    cursor: pointer;
+    padding: 1rem;
+    color: var(--color-priD);
+}
+summary:hover, details[open] summary {
+    background-color: var(--color-secB);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th { text-align: center; }
+td, th { border: 1px solid var(--color-fg); }
+
+/* Page elements */
+html {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+}
+
+body { margin: 0; }
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-secB);
+}
+nav * { font-family: var(--font-heading); }
+nav a,
+nav button {
+    display: block;
+    align-items: center;
+    text-align: center;
+    border-radius: 0;
+    background-color: transparent;
+    color: var(--color-priD);
+    text-decoration: none;
+}
+nav a {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+nav a:hover,
+nav button:hover { background-color: var(--color-priB); }
+nav button div {
+    position: absolute;
+    background-color: inherit;
+    display: none;
+}
+nav button div a {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+nav button div a:hover {
+    background-color: var(--color-priD);
+    color: var(--color-priB);
+}
+nav button:hover div {
+    display: block;
+}
+#navLogo {
+    flex-grow: 0;
+    flex-basis: 3rem;
+}
+#navLogo img { display: block; }
+#navLinks { display: flex; }
+#navLinks > a,
+#navLinks button { width: 100%; }
+#navLinks button {
+    /* Padding due to existing padding from .buttonA */
+    padding-top: 0;
+    padding-bottom: 0;
+}
+#navLang {
+    flex: 0 1 3rem;
+    text-transform: uppercase;
+}
+#navMenu { display: none; } /* Responsive menu */
+
+main { padding-top: 3rem; }
+main > hr { margin: 0; }
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--color-priD);
+}
+footer a {
+    color: var(--color-fg);
+    text-decoration: none;
+}
+footer > div {
+    flex: 1 1 20rem;
+    margin: 0 1rem;
+}
+#footerLogo {
+    align-self: center;
+    display: flex; /* Center image */
+    flex-grow: 0;
+    flex-basis: 5rem;
+    /* Responsive setting with flex-basis */
+}
+#footerLogo > img {
+    margin: auto;
+    height: 3rem
+}
+footer h3 { color: var(--color-green) }
+footer p { color: var(--color-white) }
+
+/* Classes */
+.borRouTL { border-top-left-radius: 1rem; }
+.borRouTR { border-top-right-radius: 1rem; }
+.borRouBR { border-bottom-right-radius: 1rem; }
+.borRouBL { border-bottom-left-radius: 1rem; }
+
+button,
+.buttonA {
+    /* Button-like links, ensure consistency */
+    /* display: block; interesting consideration */
+    border-radius: 1rem;
+    padding: 0.5rem;
+    background-color: var(--color-secB);
+    text-decoration: none;
+    font-family: inherit;
+    font-size: inherit;
+}
+button:hover,
+.buttonA:hover {
+    background-color: var(--color-priB);
+}
+
+.quotePara {
+    padding-left: 0.5rem;
+    border-left: 0.5rem solid var(--color-priB);
+}
+
+.secBox { background-color: var(--color-gray); }
+.secBox h1,
+.secBox h2 { color: var(--color-priB); }
+.secBox hr { margin: 2rem 0; }
+
+.portal {
+    /* Portal-like container */
+    display: flex; /* Allign centre */
+    padding: 1rem;
+    background-color: var(--color-bright);
+}
+.portal button {
+    margin: auto;
+    border-radius: 1rem;
+    font-size: xx-large;
+    background: var(--color-white);
+}
+.portal h1 { margin: 0; }
+
+.notification {
+    background-color: var(--color-red);
+    padding: 1rem;
+}
+.notification:empty { display: none; }
+
+.secAlignStart div {
+    /* section with long text */
+    align-self: self-start !important;
+}
+
+.secBgImg {
+    /* Section with background image and overlay text */
+    background-size: cover;
+    background-position: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.secBgImg div {
+    margin: 0;
+    padding: 1rem;
+    width: fit-content;
+    background-color: #000000A0;
+    color: var(--color-priB);
+}
+
+.secCen {
+    /* Section with centre layout */
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.secCen h1,
+.secCen h2,
+.secCen h3,
+.secCen > p { text-align: center; }
+
+.secCol {
+    /* Section with column layout */
+    display: flex;
+    flex-wrap: wrap;
+}
+.secCol.reverse { flex-direction: row-reverse; }
+.secCol > div {
+    flex: 1 1 20rem; /* New line when out of space */
+    width: 100%;
+    padding: 1rem;
+    align-self: center;
+}
+.secCol img {
+    display: block;
+    width: 100%;
+}
+.secCol > .noPadding { padding: 0; }
+.secCol > .right {
+    /* Allign items to the right */
+    text-align: right;
+}
+
+.secColImg {
+    /* Section with column layout with image filled one column */
+    display: flex;
+}
+.secColImg div {
+    width: 100%;
+    align-self: center;
+}
+.secColImgText { padding: 1rem; }

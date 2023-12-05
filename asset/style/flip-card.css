@@ -1,0 +1,75 @@
+/* A flipcard that flips when being hover
+<div class="flip-card curCen">
+    <div class="inner" style="background-color: var(--color-green);">
+        <div class="front">
+            <h2>curCen1_heading</h2>
+            <p><i>curCen1_para</i></p>
+        </div>
+        <div class="back">
+            <ul>curCen1_list</ul>
+        </div>
+    </div>
+</div>
+ */
+/* Inherit settings */
+.flip-card {
+    height: fit-content;
+}
+.flip-card > .inner {
+    border-radius: inherit;
+}
+.flip-card > .inner > .front {
+    text-align: center;
+}
+.flip-card > .inner > .front,
+.flip-card > .inner > .back {
+    padding: 1rem;
+    border-radius: inherit;
+    height: inherit;
+}
+
+/* Flip card disable on small screen to prevent confusion */
+@media (min-width: 50rem) {
+    .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: fit-content;
+        perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    }
+
+    /* This container is needed to position the front and back side */
+    .flip-card > .inner {
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+
+    /* Do an horizontal flip when you move the mouse over the flip box container */
+    .flip-card:hover > .inner {
+        transform: rotateY(180deg);
+    }
+
+    /* Position the front and back side */
+    .flip-card > .inner > .front,
+    .flip-card > .inner > .back {
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden; /* Safari */
+    }
+
+    /* Style the front side (fallback if image is missing) */
+    .flip-card > .inner > .front {
+        position: absolute;
+        background-color: inherit;
+        /* color: black; */
+    }
+
+    /* Style the back side */
+    .flip-card > .inner > .back {
+        background-color: var(--color-gray);
+        transform: rotateY(180deg);
+    }
+}

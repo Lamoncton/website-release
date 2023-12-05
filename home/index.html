@@ -1,0 +1,259 @@
+<html lang="en"><head><meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap" rel="stylesheet">
+
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> -->
+
+<link rel="stylesheet" href="/asset/style/style.css">
+<link rel="stylesheet" href="/asset/style/responsive.css">
+
+<!-- SEO -->
+<link rel="shortcut icon" href="/asset/image/logomark.png" type="image/x-icon">
+<meta name="keywords" content="Lamoncton, ECE">
+<meta name="description" content="Lamoncton">
+<meta name="author" content="Lamoncton JSC.">
+
+<title>Lamoncton</title></head>
+<body>
+    <header><nav class="secCol">
+    <div id="navLogo" class="noPadding">
+        <img src="/asset/image/logomark.png" alt="Lamoncton logomark">
+    </div>
+    <div id="navLinks" class="noPadding">
+        <a href="/home">Home</a>
+        <!-- <a href="/about">About us</a> -->
+        <button>
+            <p>About us</p>
+            <div>
+                <a href="/about/importance">Importance</a>
+                <a href="nav_method_url">nav_method_trans</a>
+                <!-- <a href="/about/program">Program</a> -->
+            </div>
+        </button>
+        <a id="navLang" href="/">en</a>
+    </div>
+    <a id="navMenu" href="javascript:void(0)" onclick="displayMenu()">Menu</a>
+</nav>
+
+<!-- Div to detect if the user clicked outside of the menu to close the menu -->
+<div id="touchFocus" onclick="displayMenu()"></div>
+        <link rel="stylesheet" href="/asset/style/flip-card.css">
+        <link rel="stylesheet" href="/asset/style/slideshow.css">
+
+        <style>
+            .curCen { border-radius: 1rem; }
+
+            @media (min-width: 50rem) {
+                .flip-card.curCen { height: 20rem; }
+            }
+
+            #comSec {
+                background-color: var(--color-secB);
+                padding-top: 1rem;
+            }
+            #comments { flex-wrap: wrap; }
+            .comDiv {
+                flex: 1 1 20rem;
+                margin: 1rem;
+                border-radius: 1rem;
+                border: 0.1rem solid var(--color-priD);
+            }
+            .comA {
+                font-style: italic;
+                text-align: right;
+                color: var(--color-priD);
+            }
+        </style>
+
+        <script src="/asset/script/slideshow.js"></script>
+        <script>
+            // Add slideshow
+            slideshows.welcomeBanner = {
+                images: [
+                    '/asset/image/horse.jpg',
+                    '/asset/image/IMG_1093.png',
+                ]
+            }
+        </script>
+    </header>
+    <main><!-- <section class="notification">
+    <h3></h3>
+    
+</section> -->
+        <section id="welcomeBanner" class="secBgImg" style="background-image: url(/asset/image/IMG_1093.png);">
+            <div>
+                <h1>Lamoncton homepage</h1>
+            </div>
+        </section>
+
+        <section class="secCol secBox">
+            <div style="flex: 0 1 15rem;">
+                <img src="/asset/image/logo.png" alt="Logo">
+            </div>
+            <div>
+                <h1>intro_heading</h1>
+                <p>intro_para</p>
+            </div>
+        </section>
+
+        <section class="secCol reverse secAlignStart">
+            <div class="noPadding">
+                <img class="borRouBL" src="/asset/image/IMG_0393.jpg" alt="PTC 4th anniversary">
+            </div>
+            <div>
+                <h1>impro_heading</h1>
+                <p>impro_para</p>
+            </div>
+        </section>
+
+        <section class="secCol">
+            <div class="noPadding">
+                <img class="borRouTR borRouBR" src="/asset/image/home-intro.jpg" alt="Doctors interviewing children">
+            </div>
+            <div>
+                <h1>impro2_heading</h1>
+                <p>impro2_para</p>
+            </div>
+        </section>
+
+        <section class="secCen">
+            <h1>curCen_heading</h1>
+            <p>curCen_para</p>
+            <section class="secCol secAlignStart noPadding">
+                <div class="flip-card curCen">
+                    <div class="inner" style="background-color: var(--color-green);">
+                        <div class="front">
+                            <h2>curCen1_heading</h2>
+                            <p><i>curCen1_para</i></p>
+                        </div>
+                        <div class="back">
+                            <ul>curCen1_list</ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card curCen">
+                    <div class="inner" "="" style="background-color: var(--color-red);">
+                        <div class="front">
+                            <h2>curCen2_heading</h2>
+                            <p><i>curCen2_para</i></p>
+                        </div>
+                        <div class="back">
+                            <ul>curCen2_list</ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Split to have 2-2 layout -->
+            <section class="secCol secAlignStart noPadding">
+                <div class="flip-card curCen">
+                    <div class="inner" style="background-color: var(--color-secB);">
+                        <div class="front">
+                            <h2>curCen3_heading</h2>
+                            <p><i>curCen3_para</i></p>
+                        </div>
+                        <div class="back">
+                            <ul>curCen3_list</ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card curCen">
+                    <div class="inner" style="background-color: var(--color-secD);">
+                        <div class="front">
+                            <h2>curCen4_heading</h2>
+                            <p><i>curCen4_para</i></p>
+                        </div>
+                        <div class="back">
+                            <ul>curCen4_list</ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <p>curCen_aft</p>
+        </section>
+
+        <section class="secCol">
+            <div class="noPadding">
+                <img src="/asset/image/horse.jpg" alt="Children looking at horses">
+            </div>
+            <div>
+                <h1>longExp_heading</h1>
+                <p>longExp_para</p>
+            </div>
+        </section>
+
+        <section id="comSec" class="secCen">
+            <h1>com_h</h1>
+            <p>com_p</p>
+            <section id="comments" class="secCol secAlignStart">
+                <div class="secBox comDiv">
+                    <h3>com1_h</h3>
+                    <p>com1_p</p>
+                    <p class="comA">com1_a</p>
+                </div>
+                <div class="secBox comDiv">
+                    <h3>com2_h</h3>
+                    <p>com2_p</p>
+                    <p class="comA">com2_a</p>
+                </div>
+                <div class="secBox comDiv">
+                    <h3>com3_h</h3>
+                    <p>com3_p</p>
+                    <p class="comA">com3_a</p>
+                </div>
+                <div class="secBox comDiv">
+                    <h3>com4_h</h3>
+                    <p>com4_p</p>
+                    <p class="comA">com4_a</p>
+                </div>
+                <div class="secBox comDiv">
+                    <h3>com5_h</h3>
+                    <p>com5_p</p>
+                    <p class="comA">com5_a</p>
+                </div>
+                <div class="secBox comDiv">
+                    <h3>com6_h</h3>
+                    <p>com6_p</p>
+                    <p class="comA">com6_a</p>
+                </div>
+                <div class="secBox comDiv">
+                    <h3>com7_h</h3>
+                    <p>com7_p</p>
+                    <p class="comA">com7_a</p>
+                </div>
+                <div class="secBox comDiv">
+                    <h3>com8_h</h3>
+                    <p>com8_p</p>
+                    <p class="comA">com8_a</p>
+                </div>
+            </section>
+        </section>
+    </main>
+    <div><section class="secBgImg" style="background-image: url(/asset/image/IMG_0625.png);">
+    <div>
+        <h1> Enroll into our program</h1>
+        <p>Find a school</p>
+    </div>
+</section></div>
+    <footer><div id="footerLogo">
+    <img src="/asset/image/logomark-white.png" alt="Lamoncton white logomark">
+</div>
+<div class="secCol secAlignStart">
+    <div>
+        <h3>CONTACT US</h3>
+        <p>T: (+84) 28 39840412<br>E: <a href="mailto:lamoncton.info@gmail.com">lamoncton.info@gmail.com</a></p>
+        <p>87 street number 14, Linh Chieu Ward, Thu Duc city, Ho Chi Minh city, Vietnam</p>
+    </div>
+    <div>
+        <h3>BECOME A FRANCHISE PARTNER</h3>
+        <p>We are finding competent partners to multiply CaKids Franchising System in Vietnam and beyond. If you want to know more about this fascinating opportunity, click the button below.</p>
+    </div>
+</div></footer>
+
+
+<script src="/asset/script/script.js"></script>
+<script src="/Static-Wind/preview.js"></script></body></html>
